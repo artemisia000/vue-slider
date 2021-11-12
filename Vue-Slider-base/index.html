@@ -32,17 +32,17 @@
         <!-- Thumbnails -->
         <div class="thumbs">
 
-            <div class="thumb ">
+            
                 <div v-for="(slide, index) in slides" 
                      class="thumb"
                      :class = "{active: index === activeSlide}">
 
                     <img :src="slides[activeSlide].image" alt="">
                 </div>    
-            </div>
+            
         
-            <div class="prev">&uarr;</div>
-            <div class="next">&darr;</div>
+            <div class="prev" @click="prev">&uarr;</div>
+            <div class="next" @click="next">&darr;</div>
         </div>
     </section>
 </div>
