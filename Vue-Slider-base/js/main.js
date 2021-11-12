@@ -62,12 +62,14 @@ methods: {
         this.activeSlide++;
         
 
-        if(this.activeSlide > 0) {
-            this.activeSlide = this.activeSlide.length - 1;
+        if 
+            (this.activeSlide > this.slides.length - 1) {
             this.activeSlide = 0;
         }
-    }
+    },
 
 }
+
+
 
 });

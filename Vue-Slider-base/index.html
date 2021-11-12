@@ -14,44 +14,33 @@
 
 <div id="root" >
 
-   <section class="carousel">
+   <section class="carousel" >
 
-    <img :src="slides[activeSlide].image" alt="slides[activeSlide].title">
-
-    <div class="text">
-        <h3>{{slides[activeSlide].title}} </h3>
-        <p>{{slides[activeSlide].text}} </p>
-    </div>
-       <!--
         <div class="images">
             
             <div class="image-container">
-                <img src="./img/01.jpg" alt="Lorem">
+                <img :src="slides[activeSlide].image " alt="slides[activeSlide].title">
+
                 <div class="text">
-                    <h3>Lorem</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.</p>
+                    <h3>{{slides[activeSlide].title}} </h3>
+                    <p>{{slides[activeSlide].text}} </p>
+                   
                 </div>
             </div>
         </div>
-    -->
+    
         <!-- Thumbnails -->
         <div class="thumbs">
 
-            <div v-for="(slide, index) in slides" 
-            class="thumb"
-            :class = "{active: index === activeSlide}">
+            <div class="thumb ">
+                <div v-for="(slide, index) in slides" 
+                     class="thumb"
+                     :class = "{active: index === activeSlide}">
 
-            <img :src="slides[activeSlide].image" alt="">
-
-
+                    <img :src="slides[activeSlide].image" alt="">
+                </div>    
             </div>
-
         
-    <!--     
-            <div class="thumb active">
-                <img src="./img/01.jpg" alt="Lorem">
-            </div>
-        -->
             <div class="prev">&uarr;</div>
             <div class="next">&darr;</div>
         </div>
