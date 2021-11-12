@@ -13,12 +13,12 @@ const app = new Vue ({
         },
         {
         image: 'img/02.jpg',
-        title: 'Svezia',
+        title: 'Francia',
         text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'    
         },
         {
         image: 'img/03.jpg',
-        title: 'Svezia',
+        title: 'Italia',
         text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'    
         },
         {
