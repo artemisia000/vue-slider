@@ -34,8 +34,17 @@ const app = new Vue ({
 
 ],
 
-activeSlide:0,
+activeSlide: 0,
 
+},
+
+
+//SET INTERVAL
+
+created () {
+    setInterval (() => {
+        this.next();
+    },3000);
 },
 
 
@@ -44,6 +53,7 @@ activeSlide:0,
 
 methods: {
 
+    
     //prev
 
     prev() {
@@ -61,36 +71,16 @@ methods: {
 
         this.activeSlide++;
         
-        if  (this.activeSlide > 0){ 
-            this.activeSlide > this.slides.length - 1; 
+        if  (this.activeSlide > this.slides.length - 1){
+            this.activeSlide = 0; 
         }
     },
+
 }
 
 });
 
 
-//SET INTERVAL
-
-let gallery = document.querySelectorAll('.images .image-container');
-console.log(gallery);
-
-let activeIndex = 0;
-
-gallery[activeIndex].classList.add('active');
-
-setInterval (() => {
-
-    activeIndex++;
-
-    if (activeIndex === gallery.length){
-        activeIndex = 0;
-    }
 
 
-    document.querySelector('.thumb .active').classList.remove('active');
-
-    gallery[activeIndex].classList.add('active');
-    
-},3000);
 
